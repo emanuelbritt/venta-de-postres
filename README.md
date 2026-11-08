@@ -1,4 +1,4 @@
-# Dulce cuenta
+# Dulces Momentos
 
 Aplicación web progresiva (PWA) para llevar pedidos, abonos, gastos y el resumen diario de un negocio de postres. Funciona en celular y computadora. Guarda los datos en el dispositivo mientras no haya Firebase conectado; con Firestore conectado, los cambios se actualizan en vivo entre dispositivos.
 
@@ -28,6 +28,8 @@ Si Firestore todavía no está creado o sus reglas bloquean el acceso, la app mo
 - Resumen acumulado de ventas, unidades, cuentas pendientes, gastos, ganancia neta y recaudo por medio para todas las tandas.
 - Búsqueda, filtros de fecha y estado, edición y eliminación.
 - PWA instalable y shell disponible sin conexión.
+- Contraseña interna sencilla `123` antes de abrir la configuración (solo evita cambios accidentales; no sustituye autenticación).
+- El detalle de cada pedido muestra el historial de pagos y permite registrar el saldo completo o un abono. Si un pago en efectivo supera el saldo, calcula el cambio pendiente y permite registrar su devolución después.
 
 ## Datos y sincronización
 
