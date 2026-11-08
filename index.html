@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Control sencillo de ventas, pagos y gastos de tu negocio.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Postrería · Caja</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Inicio"><span class="brand-icon">✳</span><span><b id="business-name">Dulce cuenta</b><small>CONTROL DEL NEGOCIO</small></span></a>
+    <div class="top-actions"><span class="sync-state" id="sync-state"><i></i><span>Solo en este dispositivo</span></span><button class="icon-btn" id="settings-btn" aria-label="Configuración" title="Configuración">⚙</button></div>
+  </header>
+  <main class="shell">
+    <section class="welcome"><div><p class="eyebrow">RESUMEN GENERAL</p><h1>Hola, <span>vamos con las cuentas.</span></h1><p class="welcome-sub">Tus ventas y el movimiento de todas las tandas, en un solo lugar.</p></div><button id="install-btn" class="btn btn-light hidden">＋ Instalar app</button></section>
+    <section class="summary-grid" aria-label="Resumen del negocio">
+      <article class="summary-card main-card"><div class="summary-top"><span>Ventas totales</span><span class="card-glyph">↗</span></div><strong id="sales-total">$0</strong><div class="summary-foot"><span><b id="units-total">0</b> postres vendidos</span><span id="orders-count">0 pedidos</span></div></article>
+      <article class="summary-card"><div class="summary-top"><span>Por cobrar</span><span class="card-glyph amber">◷</span></div><strong id="pending-total">$0</strong><div class="summary-foot"><span id="pending-count">0 clientes pendientes</span></div></article>
+      <article class="summary-card"><div class="summary-top"><span>Gastos totales</span><span class="card-glyph coral">↘</span></div><strong id="expenses-total">$0</strong><div class="summary-foot"><span id="expense-count">0 gastos registrados</span></div></article>
+      <article class="summary-card profit-card"><div class="summary-top"><span>Ganancia neta acumulada</span><span class="card-glyph">✦</span></div><strong id="profit-total">$0</strong><div class="summary-foot"><span>Ventas − gastos</span></div></article>
+    </section>
+
+    <section class="cash-strip"><div class="cash-title"><span class="cash-icon">$</span><div><b>Dinero recibido</b><small>Acumulado según el medio de pago</small></div></div><div class="cash-breakdown"><span><i class="dot cash-dot"></i>Efectivo <b id="cash-total">$0</b></span><span><i class="dot transfer-dot"></i>Transferencias <b id="transfer-total">$0</b></span></div></section>
+
+    <section class="content-panel">
+      <div class="panel-head"><div><p class="eyebrow">MOVIMIENTO</p><h2>Pedidos y gastos</h2></div><div class="head-actions"><button class="btn btn-outline" id="add-expense">＋ Registrar gasto</button><button class="btn btn-primary" id="add-order">＋ Nuevo pedido</button></div></div>
+      <div class="toolbar"><div class="tabs" role="tablist"><button class="tab active" data-tab="orders" role="tab">Pedidos <span id="orders-tab-count">0</span></button><button class="tab" data-tab="expenses" role="tab">Gastos <span id="expenses-tab-count">0</span></button></div><div class="filters"><label class="search"><span>⌕</span><input id="search-input" type="search" placeholder="Buscar cliente…"></label><input id="date-filter" type="date" aria-label="Filtrar por fecha"><select id="status-filter" aria-label="Filtrar por estado"><option value="all">Todos los pagos</option><option value="pending">Pendientes</option><option value="partial">Abonos</option><option value="paid">Pagados</option></select></div></div>
+      <div id="orders-view"><div class="table-wrap"><table><thead><tr><th>CLIENTE</th><th>POSTRES</th><th>TOTAL</th><th>ABONADO</th><th>FALTA</th><th>ESTADO</th><th>FECHA</th><th></th></tr></thead><tbody id="orders-body"></tbody></table></div><div class="mobile-list" id="orders-mobile"></div><div class="empty-state hidden" id="orders-empty"><span>🍰</span><b>Aún no hay pedidos</b><p>Registra tu primera venta para empezar.</p><button class="btn btn-primary" id="empty-add-order">＋ Nuevo pedido</button></div></div>
+      <div id="expenses-view" class="hidden"><div class="table-wrap"><table><thead><tr><th>GASTO</th><th>CATEGORÍA</th><th>VALOR</th><th>MEDIO</th><th>CUENTA</th><th>FECHA</th><th></th></tr></thead><tbody id="expenses-body"></tbody></table></div><div class="mobile-list" id="expenses-mobile"></div><div class="empty-state hidden" id="expenses-empty"><span>🧾</span><b>Aún no hay gastos</b><p>Registra compras e insumos del negocio.</p><button class="btn btn-primary" id="empty-add-expense">＋ Registrar gasto</button></div></div>
+      <footer class="table-footer"><span id="table-count">0 pedidos</span><span>Precio actual: <b id="unit-price-label">$8.000</b> / postre</span></footer>
+    </section>
+    <p class="privacy-note">Tus datos se guardan en este dispositivo. Conecta Firebase en <button class="text-button" id="connect-link">Configuración</button> para compartirlos en vivo entre celulares.</p>
+  </main>
+  <nav class="mobile-nav"><button class="active" data-nav="orders"><span>▤</span>Pedidos</button><button data-nav="expenses"><span>↘</span>Gastos</button><button id="mobile-add"><span>＋</span>Agregar</button></nav>
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
