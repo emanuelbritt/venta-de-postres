@@ -23,6 +23,7 @@ Si Firestore todavía no está creado o sus reglas bloquean el acceso, la app mo
 - Precio base editable (inicia en COP $8.000) y precio específico por pedido.
 - Pedidos con cantidades, fecha, nota y cliente.
 - Pagos divididos entre efectivo y transferencia, con cuenta o responsable asociado a cada pago.
+- Valores en pesos con separador de miles automático al escribir.
 - Saldos pendientes y estados de pagado, abono o pendiente, calculados automáticamente.
 - Gastos por categoría, medio de pago y cuenta.
 - Resumen acumulado de ventas, unidades, cuentas pendientes, gastos, ganancia neta y recaudo por medio para todas las tandas.

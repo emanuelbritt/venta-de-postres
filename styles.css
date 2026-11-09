@@ -175,4 +175,5 @@ svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-l
 .delivery-payment-state{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:10px;padding:12px;background:#edf4ee;border-radius:9px}
 .delivery-payment-state span{font-size:11px;color:#748178}
 .delivery-payment-state b{font-size:12px;color:#395743;text-align:right}
+.money-input{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 @media(max-width:620px){.delivery-confirm-card{padding:11px}.delivery-confirm-card b{font-size:15px}.delivery-confirm-card small{font-size:12px}.delivery-payment-state{align-items:flex-start;flex-direction:column}.delivery-payment-state b{text-align:left}}
