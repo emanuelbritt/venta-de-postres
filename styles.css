@@ -131,3 +131,48 @@ svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-l
   .order-total-preview{padding:13px}
 }
 @media(max-width:360px){.order-client{gap:6px}.quantity-tag{min-width:27px;padding:0 5px}.mobile-amounts{gap:7px}}
+.delivery-tracker{border:1px solid #e3eae4;background:#fff;border-radius:14px;padding:15px 19px;margin:14px 0 0;box-shadow:0 3px 14px #173f3505}
+.delivery-tracker-head{display:flex;align-items:center;justify-content:space-between;gap:22px}
+.delivery-tracker-head .eyebrow{margin-bottom:4px}
+.delivery-tracker-head h2{font:700 15px Manrope,sans-serif;margin:0;color:#34473b}
+.delivery-progress-copy{width:min(48%,430px)}
+.delivery-progress-copy>b{font-size:11px;color:#68786d;font-weight:600}
+.delivery-progress-track{height:6px;border-radius:9px;background:#edf1ed;margin-top:8px;overflow:hidden}
+.delivery-progress-track span{display:block;height:100%;border-radius:9px;background:#4e8a68;transition:width .2s ease}
+.delivery-quick-filters{display:flex;align-items:stretch;gap:8px;margin-top:13px}
+.delivery-quick-filters button{border:1px solid #e4eae5;border-radius:9px;background:#f9fbf9;color:#53645a;padding:8px 12px;text-align:left;display:flex;flex-direction:column;gap:3px;min-width:145px;cursor:pointer}
+.delivery-quick-filters button>span{font-size:10px;color:#849087}
+.delivery-quick-filters button>b{font-size:11px;color:#526157;font-weight:600}
+.delivery-quick-filters button strong{font-size:14px;color:#334c3b;margin-right:2px}
+.delivery-quick-filters button.active:not(.delivery-all){background:#edf4ee;border-color:#bdd2c2}
+.delivery-quick-filters .delivery-all{margin-left:auto;align-self:center;min-width:0;display:block;font-size:10px;padding:9px 13px;background:transparent}
+.delivery-quick-filters .delivery-all.active{background:#edf4ee;border-color:#bdd2c2;color:#315d48;font-weight:700}
+.delivery-badge{border:1px solid #e8ece8;border-radius:20px;background:#f6f7f5;color:#849087;padding:5px 8px;font:600 9px 'DM Sans',sans-serif;white-space:nowrap;cursor:pointer}
+.delivery-badge.delivered{color:#41805a;background:#e8f4ec;border-color:#d9ebdf}
+.delivery-badge.not-delivered{color:#8c7147;background:#fcf5e8;border-color:#f2e6cd}
+.order-status-stack{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.detail-delivery{grid-column:1/-1;background:#fcf5e8!important;flex-direction:row!important;align-items:center;justify-content:space-between}
+.detail-delivery.is-delivered{background:#e8f4ec!important}
+.detail-delivery b{font-size:12px!important}
+@media(max-width:620px){
+ .delivery-tracker{padding:13px;margin-top:12px}
+ .delivery-tracker-head{align-items:flex-start;flex-direction:column;gap:10px}
+ .delivery-progress-copy{width:100%}
+ .delivery-progress-copy>b{font-size:11px}
+ .delivery-quick-filters{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}
+ .delivery-quick-filters button{min-width:0;padding:8px 9px}
+ .delivery-quick-filters button>span{font-size:10px}
+ .delivery-quick-filters button>b{font-size:10px}
+ .delivery-quick-filters button strong{font-size:13px}
+ .delivery-quick-filters .delivery-all{grid-column:1/-1;justify-self:center;margin:0;min-width:110px;text-align:center}
+ .delivery-badge{font-size:9px;padding:4px 7px}
+ .order-status-stack{gap:4px}
+}
+.delivery-confirm-card{display:flex;align-items:center;gap:12px;background:#f4f7f4;border:1px solid var(--line);border-radius:11px;padding:13px}
+.delivery-confirm-card b,.delivery-confirm-card small{display:block}
+.delivery-confirm-card b{font-size:14px;color:#33463b}
+.delivery-confirm-card small{font-size:11px;color:#849087;margin-top:4px}
+.delivery-payment-state{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:10px;padding:12px;background:#edf4ee;border-radius:9px}
+.delivery-payment-state span{font-size:11px;color:#748178}
+.delivery-payment-state b{font-size:12px;color:#395743;text-align:right}
+@media(max-width:620px){.delivery-confirm-card{padding:11px}.delivery-confirm-card b{font-size:15px}.delivery-confirm-card small{font-size:12px}.delivery-payment-state{align-items:flex-start;flex-direction:column}.delivery-payment-state b{text-align:left}}

@@ -26,10 +26,11 @@ Si Firestore todavía no está creado o sus reglas bloquean el acceso, la app mo
 - Saldos pendientes y estados de pagado, abono o pendiente, calculados automáticamente.
 - Gastos por categoría, medio de pago y cuenta.
 - Resumen acumulado de ventas, unidades, cuentas pendientes, gastos, ganancia neta y recaudo por medio para todas las tandas.
-- Búsqueda, filtros de fecha y estado, edición y eliminación.
+- Búsqueda, filtros de pago y entrega, edición y eliminación.
 - PWA instalable y shell disponible sin conexión.
 - Contraseña interna sencilla `123` antes de abrir la configuración (solo evita cambios accidentales; no sustituye autenticación).
 - El detalle de cada pedido muestra el historial de pagos y permite registrar el saldo completo o un abono. Si un pago en efectivo supera el saldo, calcula el cambio pendiente y permite registrar su devolución después.
+- Seguimiento de entregas separado del pago: filtra pedidos por entregar o ya entregados, registra cuándo se entregaron y conserva visible cualquier saldo pendiente.
 
 ## Datos y sincronización
 
