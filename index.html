@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#173f35">
   <meta name="description" content="Control sencillo de ventas, pagos y gastos de tu negocio.">
-  <link rel="manifest" href="manifest.webmanifest?v=8">
+  <link rel="manifest" href="manifest.webmanifest?v=9">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
   <title>Dulces Momentos · Ventas</title>
 </head>
 <body>
@@ -35,7 +35,7 @@
 
     <section class="content-panel">
       <div class="panel-head"><div><p class="eyebrow">MOVIMIENTO</p><h2>Pedidos y gastos</h2></div><div class="head-actions"><button class="btn btn-outline expense-action" id="add-expense"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Registrar gasto</button><button class="btn btn-primary" id="add-order"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Nuevo pedido</button></div></div>
-      <div class="toolbar"><div class="tabs" role="tablist"><button class="tab active" data-tab="orders" role="tab">Pedidos <span id="orders-tab-count">0</span></button><button class="tab" data-tab="expenses" role="tab">Gastos <span id="expenses-tab-count">0</span></button></div><div class="filters"><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.5 4.5"/></svg><input id="search-input" type="search" placeholder="Buscar cliente…"></label><select id="status-filter" aria-label="Filtrar por estado"><option value="all">Todos los pagos</option><option value="pending">Pendientes</option><option value="partial">Abonos</option><option value="paid">Pagados</option></select></div></div>
+      <div class="toolbar"><div class="tabs" role="tablist"><button class="tab active" data-tab="orders" role="tab">Pedidos <span id="orders-tab-count">0</span></button><button class="tab" data-tab="expenses" role="tab">Gastos <span id="expenses-tab-count">0</span></button></div><div class="filters"><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.5 4.5"/></svg><input id="search-input" type="search" placeholder="Buscar cliente…"></label><select id="status-filter" aria-label="Filtrar por estado"><option value="all">Todos los estados</option><option value="pending">Pendientes de pago</option><option value="partial">Abonos</option><option value="paid">Pagados</option><option value="change">Vuelto por devolver</option></select></div></div>
       <div id="orders-view"><div class="table-wrap"><table><thead><tr><th>CLIENTE</th><th>TOTAL</th><th>ABONADO</th><th>FALTA</th><th>PAGO</th><th>ENTREGA</th><th></th></tr></thead><tbody id="orders-body"></tbody></table></div><div class="mobile-list" id="orders-mobile"></div><div class="empty-state hidden" id="orders-empty"><svg class="empty-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 18h22l-2 10H7L5 18zM8 18c0-4 4-7 8-7s8 3 8 7M16 11V5m-3 3 3-3 3 3"/></svg><b>Aún no hay pedidos</b><p>Registra tu primera venta para empezar.</p><button class="btn btn-primary" id="empty-add-order">Nuevo pedido</button></div></div>
       <div id="expenses-view" class="hidden"><div class="table-wrap"><table><thead><tr><th>GASTO</th><th>CATEGORÍA</th><th>VALOR</th><th>MEDIO</th><th>CUENTA</th><th>FECHA</th><th></th></tr></thead><tbody id="expenses-body"></tbody></table></div><div class="mobile-list" id="expenses-mobile"></div><div class="empty-state hidden" id="expenses-empty"><svg class="empty-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h13l4 4v20H8zM21 4v5h5M12 15h9M12 20h9"/></svg><b>Aún no hay gastos</b><p>Registra compras e insumos del negocio.</p><button class="btn btn-primary" id="empty-add-expense">Registrar gasto</button></div></div>
       <footer class="table-footer"><span id="table-count">0 pedidos</span><span>Precio actual: <b id="unit-price-label">$8.000</b> / postre</span></footer>
@@ -45,6 +45,6 @@
   <nav class="mobile-nav"><button class="active" data-nav="orders"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM9 8h6M9 12h6M9 16h6"/><path d="M7 8h.01M7 12h.01M7 16h.01"/></svg><span>Pedidos</span></button><button data-nav="expenses"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-3-6 3zM9 8h6M9 12h6M9 16h3"/></svg><span>Gastos</span></button><button id="mobile-add"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Agregar</span></button></nav>
   <div id="modal-root"></div>
   <div id="toast" class="toast" role="status"></div>
-  <script type="module" src="app.js?v=8"></script>
+  <script type="module" src="app.js?v=9"></script>
 </body>
 </html>

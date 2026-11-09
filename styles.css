@@ -177,3 +177,13 @@ svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-l
 .delivery-payment-state b{font-size:12px;color:#395743;text-align:right}
 .money-input{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 @media(max-width:620px){.delivery-confirm-card{padding:11px}.delivery-confirm-card b{font-size:15px}.delivery-confirm-card small{font-size:12px}.delivery-payment-state{align-items:flex-start;flex-direction:column}.delivery-payment-state b{text-align:left}}
+.payment-cell{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.payment-label-row{display:flex;align-items:center;justify-content:flex-end;gap:4px;flex-wrap:wrap}
+.change-alert{display:inline-flex;align-items:center;border:1px solid #f0dfbd;background:#fff5e4;color:#99661f;border-radius:12px;padding:3px 6px;font-size:8px;font-weight:700;white-space:nowrap;line-height:1.2}
+@media(max-width:620px){
+  .order-card,.expense-card{padding:9px 4px}
+  .order-card-bottom{margin-top:6px}
+  .order-status-stack{gap:3px}
+  .change-alert{padding:2px 5px;font-size:8px}
+  #orders-body td{padding-top:9px;padding-bottom:9px}
+}
