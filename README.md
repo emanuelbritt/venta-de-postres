@@ -32,7 +32,7 @@ Si Firestore todavía no está creado o sus reglas bloquean el acceso, la app mo
 - Contraseña interna sencilla `123` antes de abrir la configuración (solo evita cambios accidentales; no sustituye autenticación).
 - El detalle de cada pedido muestra el historial de pagos y permite registrar el saldo completo o un abono. Si un pago en efectivo supera el saldo, calcula el cambio pendiente y permite registrar su devolución después.
 - Seguimiento de entregas separado del pago: filtra pedidos por entregar o ya entregados, registra cuándo se entregaron y conserva visible cualquier saldo pendiente.
-- Pedidos ordenados alfabéticamente de A a Z; desglose de saldos por persona y por efectivo/cuenta, con movimientos transferibles entre responsables y atribuibles al cliente correspondiente.
+- Pedidos ordenados alfabéticamente de A a Z; desglose de saldos por persona y por efectivo/cuenta, con movimientos transferibles entre responsables y atribuibles al cliente correspondiente. Los importes antiguos sin responsable se muestran en Caja, que maneja efectivo.
 - Personas responsables iniciales: Emanuel, Elizabeth, Johan y Mariana. Puedes editarlas desde el panel de dinero recibido. Los gastos también descuentan del saldo de quien los pagó.
 
 ## Datos y sincronización

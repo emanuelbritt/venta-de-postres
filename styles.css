@@ -209,6 +209,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-l
 .holder-edit-row{display:flex;gap:8px;align-items:center;margin:7px 0}
 .holder-edit-row input{flex:1;min-width:0;height:40px;border:1px solid #e1e7e2;border-radius:8px;padding:0 10px;font-size:15px}
 .holder-line{color:#4e6a57!important}
+.client-money-move{width:100%;margin:10px 0 2px}
 @media(max-width:900px){.cash-overview{align-items:flex-start;flex-direction:column}.cash-breakdown{width:100%;margin-left:0}}
 @media(max-width:620px){
  .cash-overview{gap:10px}
