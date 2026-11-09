@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#173f35">
   <meta name="description" content="Control sencillo de ventas, pagos y gastos de tu negocio.">
-  <link rel="manifest" href="manifest.webmanifest?v=9">
+  <link rel="manifest" href="manifest.webmanifest?v=11">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=11">
   <title>Dulces Momentos · Ventas</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
       <div class="delivery-quick-filters"><button data-delivery-filter="pending"><span>Por entregar</span><b><strong id="delivery-pending-units">0</strong> postres</b></button><button data-delivery-filter="delivered"><span>Entregados</span><b><strong id="delivery-done-units">0</strong> postres</b></button><button class="delivery-all active" data-delivery-filter="all">Ver todos</button></div>
     </section>
 
-    <section class="cash-strip"><div class="cash-title"><span class="cash-icon">$</span><div><b>Dinero recibido</b><small>Acumulado según el medio de pago</small></div></div><div class="cash-breakdown"><span><i class="dot cash-dot"></i>Efectivo <b id="cash-total">$0</b></span><span><i class="dot transfer-dot"></i>Transferencias <b id="transfer-total">$0</b></span><span><i class="dot change-dot"></i>Cambio por devolver <b id="change-total">$0</b></span></div></section>
+    <section class="cash-strip" id="cash-panel"><div class="cash-overview"><button class="cash-title" id="cash-toggle" aria-expanded="false" aria-controls="holder-details"><span class="cash-icon">$</span><span><b>Dinero recibido</b><small>Desglose por medio y responsable</small></span><svg class="cash-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><div class="cash-breakdown"><span><i class="dot cash-dot"></i>Efectivo recibido <b id="cash-total">$0</b></span><span><i class="dot transfer-dot"></i>Transferencias <b id="transfer-total">$0</b></span><span><i class="dot change-dot"></i>Cambio por devolver <b id="change-total">$0</b></span></div></div><div class="holder-details hidden" id="holder-details"><div class="holder-details-head"><div><b>¿Quién tiene el dinero?</b><small>Saldo actual en efectivo y en cuentas</small></div><div class="holder-actions"><button class="btn btn-outline" id="manage-holders">Configurar personas</button><button class="btn btn-primary" id="move-money">Mover dinero</button></div></div><div class="holder-breakdown" id="holder-breakdown"></div></div></section>
 
     <section class="content-panel">
       <div class="panel-head"><div><p class="eyebrow">MOVIMIENTO</p><h2>Pedidos y gastos</h2></div><div class="head-actions"><button class="btn btn-outline expense-action" id="add-expense"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Registrar gasto</button><button class="btn btn-primary" id="add-order"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Nuevo pedido</button></div></div>
@@ -45,6 +45,6 @@
   <nav class="mobile-nav"><button class="active" data-nav="orders"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM9 8h6M9 12h6M9 16h6"/><path d="M7 8h.01M7 12h.01M7 16h.01"/></svg><span>Pedidos</span></button><button data-nav="expenses"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-3-6 3zM9 8h6M9 12h6M9 16h3"/></svg><span>Gastos</span></button><button id="mobile-add"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Agregar</span></button></nav>
   <div id="modal-root"></div>
   <div id="toast" class="toast" role="status"></div>
-  <script type="module" src="app.js?v=9"></script>
+  <script type="module" src="app.js?v=11"></script>
 </body>
 </html>

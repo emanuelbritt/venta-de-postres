@@ -187,3 +187,39 @@ svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-l
   .change-alert{padding:2px 5px;font-size:8px}
   #orders-body td{padding-top:9px;padding-bottom:9px}
 }
+.cash-strip{display:block}
+.cash-overview{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.cash-title{border:0;background:transparent;padding:0;color:inherit;text-align:left;cursor:pointer;flex:none}
+.cash-title>span:nth-child(2){display:block}
+.cash-chevron{width:17px;height:17px;color:#89968e;transition:transform .2s}
+.cash-title[aria-expanded="true"] .cash-chevron{transform:rotate(180deg)}
+.holder-details{border-top:1px solid #dfe8e1;margin-top:13px;padding-top:12px}
+.holder-details-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:9px}
+.holder-details-head>b,.holder-details-head small{display:block}
+.holder-details-head>div:first-child>b{font-size:12px;color:#3d5144}
+.holder-details-head small{font-size:10px;color:#89958d;margin-top:3px}
+.holder-actions{display:flex;gap:7px}
+.holder-actions .btn{font-size:10px;padding:8px 10px}
+.holder-breakdown{display:grid;gap:6px}
+.holder-row{display:grid;grid-template-columns:minmax(110px,1fr) minmax(115px,.8fr) minmax(115px,.8fr);align-items:center;gap:10px;background:#fff;border:1px solid #e3eae4;border-radius:9px;padding:8px 11px}
+.holder-row>b{font-size:11px;color:#34483b}
+.holder-row>span{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.holder-row small{font-size:10px;color:#849087}
+.holder-row strong{font-size:11px;color:#45564a;font-variant-numeric:tabular-nums}
+.holder-edit-row{display:flex;gap:8px;align-items:center;margin:7px 0}
+.holder-edit-row input{flex:1;min-width:0;height:40px;border:1px solid #e1e7e2;border-radius:8px;padding:0 10px;font-size:15px}
+.holder-line{color:#4e6a57!important}
+@media(max-width:900px){.cash-overview{align-items:flex-start;flex-direction:column}.cash-breakdown{width:100%;margin-left:0}}
+@media(max-width:620px){
+ .cash-overview{gap:10px}
+ .cash-title{width:100%}
+ .cash-breakdown{margin-top:0}
+ .holder-details-head{align-items:flex-start;flex-direction:column}
+ .holder-actions{width:100%}
+ .holder-actions .btn{flex:1}
+ .holder-row{grid-template-columns:minmax(80px,.8fr) 1fr 1fr;gap:7px;padding:8px}
+ .holder-row>b{font-size:10px}
+ .holder-row>span{align-items:flex-start;flex-direction:column;gap:2px}
+ .holder-row small{font-size:9px}
+ .holder-row strong{font-size:10px}
+}

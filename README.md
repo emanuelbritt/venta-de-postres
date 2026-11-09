@@ -1,6 +1,6 @@
 # Dulces Momentos
 
-Aplicación web progresiva (PWA) para llevar pedidos, abonos, gastos y el resumen diario de un negocio de postres. Funciona en celular y computadora. Guarda los datos en el dispositivo mientras no haya Firebase conectado; con Firestore conectado, los cambios se actualizan en vivo entre dispositivos.
+Aplicación web progresiva (PWA) para llevar pedidos, abonos, gastos y el resumen general por tandas de un emprendimiento de postres. Funciona en celular y computadora. Guarda los datos en el dispositivo mientras no haya Firebase conectado; con Firestore conectado, los cambios se actualizan en vivo entre dispositivos.
 
 ## Publicar en GitHub Pages
 
@@ -16,13 +16,13 @@ La app debe servirse por HTTPS para que la instalación y el funcionamiento sin 
 
 La configuración web que compartiste ya quedó integrada. La app intentará conectarse al proyecto `nuestros-negocios` automáticamente y usa Firestore para las colecciones `orders`, `expenses` y `settings`; no usa Analytics porque no es necesario para guardar ni sincronizar ventas.
 
-Si Firestore todavía no está creado o sus reglas bloquean el acceso, la app mostrará el estado de conexión y seguirá guardando en el dispositivo. En Firebase Console, habilita Firestore y configura Firebase Authentication con cuentas para las personas del negocio; luego limita las reglas de Firestore a esas cuentas antes de guardar información real de clientes. No publiques reglas que permitan lectura y escritura a cualquier visitante. La API key incluida identifica el proyecto, pero no protege los datos.
+Si Firestore todavía no está creado o sus reglas bloquean el acceso, la app mostrará el estado de conexión y seguirá guardando en el dispositivo. En este momento el acceso no requiere autenticación, así que las reglas abiertas permiten que cualquier persona con el enlace lea y cambie los datos. Úsalo solo con el enlace privado del emprendimiento; para datos sensibles, más adelante conviene agregar autenticación y reglas restringidas. La API key incluida identifica el proyecto, pero no protege los datos.
 
 ## Qué incluye
 
 - Precio base editable (inicia en COP $8.000) y precio específico por pedido.
 - Pedidos con cantidades, fecha, nota y cliente.
-- Pagos divididos entre efectivo y transferencia, con cuenta o responsable asociado a cada pago.
+- Pagos por efectivo o transferencia, asignados a la persona que los guarda; el panel de dinero recibido muestra los saldos por responsable y por efectivo/cuenta.
 - Valores en pesos con separador de miles automático al escribir.
 - Saldos pendientes y estados de pagado, abono o pendiente, calculados automáticamente.
 - Gastos por categoría, medio de pago y cuenta.
@@ -32,6 +32,8 @@ Si Firestore todavía no está creado o sus reglas bloquean el acceso, la app mo
 - Contraseña interna sencilla `123` antes de abrir la configuración (solo evita cambios accidentales; no sustituye autenticación).
 - El detalle de cada pedido muestra el historial de pagos y permite registrar el saldo completo o un abono. Si un pago en efectivo supera el saldo, calcula el cambio pendiente y permite registrar su devolución después.
 - Seguimiento de entregas separado del pago: filtra pedidos por entregar o ya entregados, registra cuándo se entregaron y conserva visible cualquier saldo pendiente.
+- Pedidos ordenados alfabéticamente de A a Z; desglose de saldos por persona y por efectivo/cuenta, con movimientos transferibles entre responsables y atribuibles al cliente correspondiente.
+- Personas responsables iniciales: Emanuel, Elizabeth, Johan y Mariana. Puedes editarlas desde el panel de dinero recibido. Los gastos también descuentan del saldo de quien los pagó.
 
 ## Datos y sincronización
 
