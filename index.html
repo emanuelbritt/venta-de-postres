@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#173f35">
   <meta name="description" content="Control sencillo de ventas, pagos y gastos de tu negocio.">
-  <link rel="manifest" href="manifest.webmanifest?v=12">
+  <link rel="manifest" href="manifest.webmanifest?v=13">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
   <title>Dulces Momentos · Ventas</title>
 </head>
 <body>
@@ -23,7 +23,8 @@
       <article class="summary-card main-card"><div class="summary-top"><span>Ventas totales</span><svg class="card-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l6-6 4 3 6-8M14 6h6v6"/></svg></div><strong id="sales-total">$0</strong><div class="summary-foot"><span><b id="units-total">0</b> postres vendidos</span><span id="orders-count">0 pedidos</span></div></article>
       <article class="summary-card"><div class="summary-top"><span>Por cobrar</span><svg class="card-glyph amber" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><strong id="pending-total">$0</strong><div class="summary-foot"><span id="pending-count">0 clientes pendientes</span></div></article>
       <article class="summary-card"><div class="summary-top"><span>Gastos totales</span><svg class="card-glyph coral" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4zM9 8h6M9 12h6"/></svg></div><strong id="expenses-total">$0</strong><div class="summary-foot"><span id="expense-count">0 gastos registrados</span></div></article>
-      <article class="summary-card profit-card"><div class="summary-top"><span>Ganancia neta acumulada</span><svg class="card-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-7"/></svg></div><strong id="profit-total">$0</strong><div class="summary-foot"><span>Ventas − gastos</span></div></article>
+      <article class="summary-card"><div class="summary-top"><span>Plante disponible</span><svg class="card-glyph amber" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><strong id="capital-total">$0</strong><div class="summary-foot"><span id="capital-foot">De $0 iniciales</span></div></article>
+      <article class="summary-card profit-card"><div class="summary-top"><span>Ganancia acumulada</span><svg class="card-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-7"/></svg></div><strong id="profit-total">$0</strong><div class="summary-foot"><span id="profit-foot">Gastos cubiertos con el plante</span></div></article>
     </section>
 
     <section class="delivery-tracker" aria-label="Seguimiento de entregas">
@@ -45,6 +46,6 @@
   <nav class="mobile-nav"><button class="active" data-nav="orders"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM9 8h6M9 12h6M9 16h6"/><path d="M7 8h.01M7 12h.01M7 16h.01"/></svg><span>Pedidos</span></button><button data-nav="expenses"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-3-6 3zM9 8h6M9 12h6M9 16h3"/></svg><span>Gastos</span></button><button id="mobile-add"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Agregar</span></button></nav>
   <div id="modal-root"></div>
   <div id="toast" class="toast" role="status"></div>
-  <script type="module" src="app.js?v=12"></script>
+  <script type="module" src="app.js?v=13"></script>
 </body>
 </html>

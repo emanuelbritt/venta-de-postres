@@ -21,10 +21,12 @@ Si Firestore todavía no está creado o sus reglas bloquean el acceso, la app mo
 ## Qué incluye
 
 - Precio base editable (inicia en COP $8.000) y precio específico por pedido.
+- Plante inicial configurable desde Configuración; los gastos consumen primero ese fondo y solo el excedente se descuenta de las ganancias. El resumen muestra el plante que queda y la ganancia acumulada.
 - Pedidos con cantidades, fecha, nota y cliente.
 - Pagos por efectivo o transferencia, asignados a la persona que los guarda; el panel de dinero recibido muestra los saldos por responsable y por efectivo/cuenta.
 - Valores en pesos con separador de miles automático al escribir.
 - Saldos pendientes y estados de pagado, abono o pendiente, calculados automáticamente.
+- Al crear un pedido puedes dejarlo pendiente, pagado completo o registrar un abono inicial con medio de pago y responsable.
 - Gastos por categoría, medio de pago y cuenta.
 - Resumen acumulado de ventas, unidades, cuentas pendientes, gastos, ganancia neta y recaudo por medio para todas las tandas.
 - Búsqueda, filtros de pago y entrega, edición y eliminación.
